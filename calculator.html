@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+  </head>
+  <body>
+    <div class="bigcontainer">
+      <input readonly type="text" class="view">
+
+      <div class="buttons">
+        <button class="operator" onclick="showonview('%')">%</button>
+        <button class="operator" onclick="showonview('/')">/</button>
+        <button class="operator" onclick="deletenum()">DE</button>
+        <button class="operator" onclick="allclear()">AC</button>
+  
+        <button onclick="showonview('1')">1</button>
+        <button onclick="showonview('2')">2</button>
+        <button onclick="showonview('3')">3</button>
+        <button class="operator" onclick="showonview('*')">*</button>
+  
+        <button onclick="showonview('4')">4</button>
+        <button onclick="showonview('5')">5</button>
+        <button onclick="showonview('6')">6</button>
+        <button class="operator" onclick="showonview('-')">-</button>
+  
+        <button onclick="showonview('7')">7</button>
+        <button onclick="showonview('8')">8</button>
+        <button onclick="showonview('9')">9</button>
+        <button class="operator" onclick="showonview('+')">+</button>
+  
+        <button onclick="showonview('0')">0</button>
+        <button onclick="showonview('.')">.</button>
+        <button class="operatorequal" onclick="Result()">=</button>
+      </div>
+    </div>
+    <script>
+      const view = document.querySelector('.view');
+      function showonview(value) {
+        view.value += value;
+      }
+      function allclear() {
+        view.value = '';
+      }
+      function deletenum() {
+        view.value = view.value.slice(0, -1);
+      }
+      function Result() {
+        try {
+          view.value = eval(view.value);
+        } catch (error) {
+          view.value = 'Error';
+        }
+      }
+    </script>
+  </body>
+  </html>
