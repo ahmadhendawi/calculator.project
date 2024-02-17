@@ -10,7 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #e0e3eb;
+  background: #525355;
 }
 .bigcontainer {
   position: relative;
@@ -18,7 +18,7 @@ body {
   width: 100%;
   border-radius: 12px;
   padding: 10px 20px 20px;
-  background: #500b0b;
+  background: #0f52ba;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
 .view {
@@ -26,8 +26,8 @@ body {
   height: 80px;
   width: 100%;
   outline: none;
-  border: rgb(85, 19, 19) solid;
-  border-radius: 10%;
+  border: rgb(64, 65, 82) solid;
+  border-radius: 5%;
   text-align: left;
   margin-bottom: 10px;
   font-size: 25px;
@@ -48,13 +48,14 @@ body {
 }
 .operatorequal{
     width: 215%;
+    margin-left: 115%;
 }
 .buttons button:hover {
-  background-color: #c23737;
+  background-color: #7981a7;
 }
 .buttons button:active{
     transform: scale(0.9);
 }
 .operator {
-  color: #4b0000;
+  color: #100161;
 }
