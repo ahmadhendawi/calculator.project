@@ -14,11 +14,11 @@ body {
 }
 .bigcontainer {
   position: relative;
-  max-width: 300px;
+  max-width: 500px;
   width: 100%;
   border-radius: 12px;
   padding: 10px 20px 20px;
-  background: #0f52ba;
+  background: #232527;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
 .view {
@@ -26,32 +26,31 @@ body {
   height: 80px;
   width: 100%;
   outline: none;
-  border: rgb(64, 65, 82) solid;
   border-radius: 20%;
   text-align: left;
   margin-bottom: 10px;
   font-size: 25px;
-  color: #000e1a;
 }
 .buttons {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 15px;
   grid-template-columns: repeat(4, 1fr);
 }
 .buttons button {
   padding: 10px;
-  border-radius: 20%;
+  border-radius: 25%;
   border: none;
   font-size: 20px;
   cursor: pointer;
   background-color: #eee;
+
 }
 .operatorequal{
     width: 215%;
     margin-left: 115%;
 }
 .buttons button:hover {
-  background-color: #7981a7;
+  background-color: #6f7474;
 }
 .buttons button:active{
     transform: scale(0.9);

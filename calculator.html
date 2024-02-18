@@ -9,30 +9,41 @@
       <input readonly type="text" class="view">
 
       <div class="buttons">
+        <button class="operator" onclick="deletenum()">DE</button>
         <button class="operator" onclick="showonview('(')">(</button>
         <button class="operator" onclick="showonview(')')">)</button>
+        <button class="operator" onclick="allclear()">AC</button>
+
         <button class="operator" onclick="showonview('%')">%</button>
         <button class="operator" onclick="showonview('/')">/</button>
-        <button class="operator" onclick="deletenum()">DE</button>
-        <button onclick="showonview('1')">1</button>
+        <button class="operator" onclick="logarithm('Math.log')">Log</button>
+        <button class="operator" onclick="squareroot('x')">√</button>
+
+        <button onclick="sin('x')">Sin</button>
+        <button onclick="cos('x')">Cos</button>
+        <button onclick="tan('x')">Tan</button>
+        <button class="operator" onclick="power('x,y')">x^2</button>
         
-        <button class="operator" onclick="allclear()">AC</button>
-        <button class="operator" onclick="showonview('*')">*</button>
-        <button onclick="showonview('2')">2</button>
-        <button onclick="showonview('3')">3</button>
-  
-        <button onclick="showonview('4')">4</button>
-        <button class="operator" onclick="showonview('-')">-</button>
-        <button onclick="showonview('5')">5</button>
-        <button onclick="showonview('6')">6</button>
-  
         <button onclick="showonview('7')">7</button>
-        <button class="operator" onclick="showonview('+')">+</button>
         <button onclick="showonview('8')">8</button>
         <button onclick="showonview('9')">9</button>
+        <button class="operator" onclick="factorial('x')">x!</button>
+        <button onclick="showonview('4')">4</button>
+
+        <button onclick="showonview('5')">5</button>
+        <button onclick="showonview('6')">6</button>
+        <button class="operator" onclick="showonview('*')">*</button>
+        <button onclick="showonview('1')">1</button>
   
+        <button onclick="showonview('2')">2</button>
+        <button onclick="showonview('3')">3</button>
+        <button class="operator" onclick="showonview('+')">+</button>
+        <button class="operator" onclick="e('x')">e</button>
         <button onclick="showonview('0')">0</button>
+
+  
         <button onclick="showonview('.')">.</button>
+        <button class="operator" onclick="showonview('-')">-</button>
         <button class="operatorequal" onclick="Result()">=</button>
       </div>
     </div>
@@ -41,6 +52,38 @@
       function showonview(value) {
         view.value += value;
       }
+      function power(){
+                view.value=Math.pow(view.value,2)
+            }
+      function factorial(){
+                var i, num, x;
+                x=1
+                num=view.value;
+                for(i=1;i<=num;i++)
+                {
+                    x=x*i;
+                }
+                i=i-1;
+                view.value=x;
+            }
+      function e(){
+                view.value=2.71;
+            }
+      function squareroot(){
+                view.value=Math.sqrt(view.value)
+            }
+      function logarithm(){
+                view.value=Math.log10(view.value)
+            }
+      function sin(){
+                view.value=Math.sin(view.value)
+            }
+      function cos(){
+                view.value=Math.cos(view.value)
+            }
+      function tan(){
+                view.value=Math.tan(view.value)
+            }
       function allclear() {
         view.value = '';
       }
